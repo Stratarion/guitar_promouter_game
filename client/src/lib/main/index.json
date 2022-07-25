@@ -1,0 +1,68 @@
+{
+    "buttons": {
+        "ok": "ок",
+        "ready": "готово",
+        "cancel": "отмена",
+        "more": "Ещё",
+        "accept": "Принять",
+        "send": "Отправить",
+        "googleSignIn": "Войти с Google",
+        "search": "Поиск",
+        "openChange": "Открыть смену",
+        "clouseChange": "Закрыть смену"
+    },
+    "home": {
+        "benefit1": "Кубок",
+        "benefit2": "benefit2",
+        "benefit3": "benefit3",
+        "benefit1Text": "Какой-то кубок",
+        "sliderTitle": "Заголовок слайда"
+    },
+    "posts": {
+        "createPost": "Создать запись",
+        "editing": "Редактировать",
+        "loginNotification": "Пожалуйста, авторизуйтесь чтобы создавать и оценивать записи",
+        "noComments": "Ещё никто не оставил комментарий",
+        "comments": "Комментарии",
+        "writeComment": "Написать комментарий",
+        "searchPosts": "Поиск записей",
+        "title": "Заголовок",
+        "titlePlaceholder": "Введите заголовок поста",
+        "tags": "Тэги",
+        "tagsPlaceholder": "Введите тэги через пробел"
+
+    },
+    "person": {
+        "firstName": "Имя",
+        "lastName": "Фамилия",
+        "email": "Почта",
+        "emailPlaceHolder": "Введите e-mail"
+    },
+    "auth": {
+        "googleError": "авторизация гугл не удалась, попробуйте повторить позже",
+        "password": "Пароль",
+        "passwordPlaceholder": "Введите пароль",
+        "confirmPassword": "Подтверждение пароля",
+        "confirmPasswordPlaceholder": "Подтверждение пароля",
+        "signIn": "Войти",
+        "signUp": "Регистрация",
+        "signInText": "Уже есть аккаунт? Войти",
+        "signUpText": "Нет учетной записи? Создать тут"
+
+    },
+    "footerText": "Сделанно с любовью",
+    "professionals": {
+        "title": "Выбор сотрудника"
+    },
+    "timeshit": {
+        "title": "Запись через календарь"
+    },
+    "profile": {
+        "title": "Профиль пользователя",
+        "statistic": "Статистика",
+        "startTime": "Текущая смена",
+        "lastFinishTime": "Закрытие прошлой смены",
+        "totalResult": "Всего отработанно",
+        "noLastChange": "Нет начатых смен"
+    }
+}
