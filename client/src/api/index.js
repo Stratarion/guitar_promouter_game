@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API = axios.create({ baseURL: 'http://134.0.115.2:5000' });
+const API = axios.create({ baseURL: 'http://localhost:5000' });
 
 API.interceptors.request.use((req) => {
   if (localStorage.getItem('profile')) {
@@ -25,3 +25,7 @@ export const deletePost = (id) => API.delete(`/posts/${id}`);
 export const signIn = (formData) => API.post('/user/signin', formData);
 export const signUp = (formData) => API.post('/user/signup', formData);
 export const googlesignin = (googleData) => API.post('/user/googlesignin', googleData);
+
+// Tutorials
+export const getAllTutorials = () => API.get('/tutorials');
+export const createTutorial = (formData) => API.post('/tutorials/create', formData);
