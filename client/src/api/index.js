@@ -8,6 +8,7 @@ API.interceptors.request.use((req) => {
   }
 
   req.headers.AccessControlAllowOrigin = 'http://134.0.115.2:5000';
+  req.headers.ContentType = 'application/json; charset=utf-8';
 
   return req;
 });

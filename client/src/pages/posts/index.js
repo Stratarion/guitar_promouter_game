@@ -90,7 +90,7 @@ const PostsPage = () => {
               dataSource={data}
               renderItem={(item) => (
                 <List.Item
-                  key={item._id}
+                  key={item.id}
                   extra={item.selectedFile
                     ? (
                       <img
@@ -109,7 +109,7 @@ const PostsPage = () => {
                 >
                   <List.Item.Meta
                     // avatar={<Avatar src={item.selectedFile} />}
-                    title={<Link to={`${ROUTS.POSTS}/${item._id}`}>{item.title}</Link>}
+                    title={<Link to={`${ROUTS.POSTS}/${item.id}`}>{item.title}</Link>}
                     description={item.name}
                   />
                   {item?.message?.split(' ').splice(0, 80).join(' ')}
