@@ -29,7 +29,7 @@ export const getPosts = (page) => async (dispatch) => {
 export const getPostsByCreator = (name) => async (dispatch) => {
   try {
     dispatch({ type: START_LOADING });
-    const { data: { data } } = await api.fetchPostsByCreator(name);
+    const data = await api.fetchPostsByCreator(name);
 
     dispatch({ type: FETCH_BY_CREATOR, payload: { data } });
     dispatch({ type: END_LOADING });
@@ -54,7 +54,6 @@ export const createPost = (post, history) => async (dispatch) => {
   try {
     dispatch({ type: START_LOADING });
     const { data } = await api.createPost(post);
-
     dispatch({ type: CREATE, payload: data });
 
     history.push(`${ROUTS.POSTS}/${data._id}`);
