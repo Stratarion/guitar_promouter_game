@@ -20,7 +20,7 @@ const CommentSection = ({ post }) => {
     <Text>{MainLib.posts.noComments}</Text>
   );
 
-  const renderCommentsBlock = () => comments.map((c) => (
+  const renderCommentsBlock = () => comments?.map((c) => (
     <Text>
       <strong>{c.split(': ')[0]}</strong>
       {c.split(':')[1]}

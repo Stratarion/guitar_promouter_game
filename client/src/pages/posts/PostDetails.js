@@ -21,7 +21,7 @@ const Post = () => {
 
   useEffect(() => {
     if (post) {
-      dispatch(getPostsBySearch({ search: 'none', tags: post?.tags.join(',') }));
+      dispatch(getPostsBySearch({ search: '', tags: post?.tags?.join(',') }));
     }
   }, [post]);
 
@@ -42,7 +42,7 @@ const Post = () => {
           {/* info block */}
           <Col span={post.selectedFile ? 16 : 24}>
             <Title level={2}>{post.title}</Title>
-            <Text>{post.tags.map((tag) => (
+            <Text>{post?.tags?.map((tag) => (
               <Link to={`/tags/${tag}`} style={linkStyle}>
                 {` #${tag} `}
               </Link>

@@ -35,7 +35,23 @@ export const getPostsBySearch = async (req, res) => {
     try {
         const title = new RegExp(searchQuery, "i");
 
-        const posts = await Post.find({ $or: [ { title }, { tags: { $in: tags.split(',') } } ]});
+        const posts = await Post.findAll({
+          where: {
+            $or: [
+              // {
+              //   tags: {
+              //     $in: tags.split(',')
+              //   }
+              // },
+              {
+                title: {
+                  $like: `${searchQuery}%`
+                }
+              },
+            ]
+          }
+        })
+        // { $or: [ { title }, { tags: { $in: tags.split(',') } } ]});
 
         res.json({ data: posts });
     } catch (error) {    
@@ -47,7 +63,7 @@ export const getPostsByCreator = async (req, res) => {
     const { name } = req.query;
 
     try {
-        const posts = await Post.find({ name });
+        const posts = await Post.findOne({ name });
 
         res.json({ data: posts });
     } catch (error) {    
@@ -59,7 +75,7 @@ export const getPost = async (req, res) => {
     const { id } = req.params;
 
     try {
-        const post = await Post.findById(id);
+        const post = await Post.findOne({id});
         
         res.status(200).json(post);
     } catch (error) {
@@ -78,6 +94,7 @@ export const createPost = async (req, res) => {
     return;
   }
 
+ 
   const newPost = { ...post, creator: req.userId, createdAt: new Date().toISOString() };
 
   Post.create(newPost)

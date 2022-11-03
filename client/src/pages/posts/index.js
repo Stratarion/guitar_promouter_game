@@ -60,7 +60,7 @@ const PostsPage = () => {
   const searchPost = (values) => {
     if (values.search.trim() || values.tags) {
       dispatch(getPostsBySearch({ search: values.search, tags: values.tags.join(',') }));
-      history.push(`${ROUTS.posts}/search?searchQuery=${values.search || 'none'}&tags=${values.tags.join(',')}`);
+      history.push(`${ROUTS.posts}/search?searchQuery=${values.search || ''}&tags=${values.tags.join(',')}`);
     } else {
       history.push('/');
     }
